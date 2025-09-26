@@ -8,8 +8,4 @@ services:
         value: pg://dpg-d1le7u95pdvs73bsq8eg-a.frankfurt-postgres.render.com:5432?u=ailliaz&p=Uqzj3O5rnOAS0jgmC2lvmTkf10bJ3m7P&d=ailliaz_v14s
       - key: NC_AUTH_JWT_SECRET
         value: 8d3c0a56-09de-43a4-90f1-b3cb2c4af49f
-    disks:
-      - name: data
-        mountPath: /usr/app/data
-        sizeGB: 1
     autoDeploy: true
