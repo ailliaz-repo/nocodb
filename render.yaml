@@ -1,10 +1,10 @@
 services:
   - type: web
     name: nocodb
-    runtime: docker
+    env: image
     image:
       url: nocodb/nocodb:latest
-    plan: starter   # kies desnoods een groter plan
+    plan: starter
     envVars:
       - key: NC_DB
         value: pg://dpg-d1le7u95pdvs73bsq8eg-a.frankfurt-postgres.render.com:5432?u=ailliaz&p=Uqzj3O5rnOAS0jgmC2lvmTkf10bJ3m7P&d=ailliaz_v14s
