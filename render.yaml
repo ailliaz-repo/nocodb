@@ -5,27 +5,9 @@ services:
     image:
       url: nocodb/nocodb:latest
     plan: starter
-    autoDeploy: true
-
     envVars:
-      # --- Postgres: geef losse velden op (geen NC_DB string nodig) ---
-      - key: NC_DB_TYPE
-        value: "pg"
-      - key: NC_DB_HOST
-        value: "dpg-d1le7u95pdvs73bsq8eg-a.frankfurt-postgres.render.com"
-      - key: NC_DB_PORT
-        value: "5432"
-      - key: NC_DB_USER
-        value: "ailliaz"
-      - key: NC_DB_PASSWORD
-        value: "Uqzj3O5rnOAS0jgmC2lvmTkf10bJ3m7P"
-      - key: NC_DB_NAME
-        value: "ailliaz_nocodb"
-      - key: NC_DB_SSL
-        value: "true"           # Render PG vereist SSL
-
-      # --- overig aanbevolen ---
-      - key: NC_PUBLIC_URL
-        value: "https://nocodb-lfh0.onrender.com"
-      - key: PORT
-        value: "8080"
+      - key: NC_DB
+        value: pg://dpg-d1le7u95pdvs73bsq8eg-a.frankfurt-postgres.render.com:5432?u=ailliaz&p=Uqzj3O5rnOAS0jgmC2lvmTkf10bJ3m7P&d=ailliaz_nocodb&ssl=true
+      - key: NC_AUTH_JWT_SECRET
+        value: 8d3c0a56-09de-43a4-90f1-b3cb2c4af49f
+    autoDeploy: true
