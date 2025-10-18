@@ -6,18 +6,12 @@ services:
       url: nocodb/nocodb:latest
     plan: starter
     autoDeploy: true
-
     envVars:
-      # ✅ Postgres connectiestring in NocoDB-formaat (pg://)
       - key: NC_DB
-        value: pg://ailliaz:Uqzj3O5rnOAS0jgmC2lvmTkf10bJ3m7P@dpg-d1le7u95pdvs73bsq8eg-a.frankfurt-postgres.render.com:5432/ailliaz_nocodb?ssl=true
-
+        value: "postgres://ailliaz:Uqzj3O5rnOAS0jgmC2lvmTkf10bJ3m7P@dpg-d1le7u95pdvs73bsq8eg-a.frankfurt-postgres.render.com:5432/ailliaz_nocodb?sslmode=require"
       - key: NC_AUTH_JWT_SECRET
-        value: 8d3c0a56-09de-43a4-90f1-b3cb2c4af49f
-
-      # Optioneel, maar aan te raden
+        value: "8d3c0a56-09de-43a4-90f1-b3cb2c4af49f"
       - key: NC_PUBLIC_URL
-        value: https://nocodb-lfh0.onrender.com
-
+        value: "https://nocodb-lfh0.onrender.com"
       - key: PORT
-        value: 8080
+        value: "8080"
